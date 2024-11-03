@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import '@fontsource/roboto/500.css';
+import Header from '../components/Header.astro';
 ---
 
 <!doctype html>
@@ -19,6 +20,8 @@ import '@fontsource/roboto/500.css';
 		<title>{title}</title>
 	</head>
 	<body>
+		
+		<Header />
 		<slot />
 	</body>
 </html>
@@ -28,11 +31,9 @@ import '@fontsource/roboto/500.css';
 	}
 	html {
 		font-family: 'Roboto', system-ui, sans-serif;
-		background: #13151a;
+		background: #ffffff;
 	}
 	body {
-		display: flex;
-		justify-content: center;
 		min-height: 100vh;
 	}
 </style>
